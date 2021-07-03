@@ -67,6 +67,7 @@ h3 {
 h4 {
   color: var(--text-title);
   font-size: var(--md);
+  font-weight: 300;
 }
 
 h5 {
@@ -91,10 +92,6 @@ a {
   text-decoration: none;
   color: var(--link);
   cursor: pointer;
-}
-
-p {
-  font-family: var(--font-alt);
 }
 
 /*

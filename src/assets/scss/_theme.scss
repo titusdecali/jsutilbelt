@@ -41,13 +41,9 @@ $box-shadow-modal: rgba(89, 93, 97, 0.05) 0 3px 0,
 
   // TRANSITIONS
   --bounce: all 0.3s cubic-bezier(0.374, 0.019, 0.035, 1.861);
-  --ease: all 0.16s ease-in-out;
+  --ease: all 0.14s ease-in-out;
 
-  --poppins: 'Poppins', sans-serif;
-  --dm-sans: 'DM Sans', sans-serif;
-
-  --font-primary: var(--poppins);
-  --font-alt: var(--dm-sans);
+  --font-primary: 'Nunito Sans', sans-serif;
 
   // FONT SIZE BREAK POINTS
   --text-scale-ratio: 1;
@@ -61,7 +57,7 @@ $box-shadow-modal: rgba(89, 93, 97, 0.05) 0 3px 0,
   // FONT SIZES
   --xxl: calc(3.2rem * var(--text-scale-ratio)); // 64px
   --xl: calc(2.5rem * var(--text-scale-ratio)); // 40px
-  --lg: calc(1.5rem * var(--text-scale-ratio)); // 24px
+  --lg: calc(1.75rem * var(--text-scale-ratio)); // 28px
   --md: calc(1.125rem * var(--text-scale-ratio)); // 18px
   --sm: calc(1rem * var(--text-scale-ratio)); // 16px
   --xs: calc(0.875rem * var(--text-scale-ratio)); // 14px
@@ -85,9 +81,10 @@ $box-shadow-modal: rgba(89, 93, 97, 0.05) 0 3px 0,
   --grey-dark-alt: #1d232f;
 
   // Link Hover
-  --blue-dark: #0f3da9;
-  --blue: #306dff;
-  --pink: #f2018a;
+  --blue: #2e6dff;
+  --blue-dark: #1347bf;
+  --pink: #f90991;
+  --pink-dark: #bd096f;
 
   // Text Highlight
   --selection: #f2018aa1;
@@ -101,8 +98,8 @@ $box-shadow-modal: rgba(89, 93, 97, 0.05) 0 3px 0,
   --success: #45bf6f;
   --success-dark: #058e35;
   --warning: #e3dc28;
-  --danger: #ef466f;
-  --error: #ef466f;
+  --danger: #ff3134;
+  --error: #ff3134;
 
   //***** Components ***** //
   // BUTTONS
@@ -114,7 +111,7 @@ $box-shadow-modal: rgba(89, 93, 97, 0.05) 0 3px 0,
   --modal-backdrop: var(--bg);
   --modal-title: calc(2rem * var(--text-scale-ratio));
   --modal-body: calc(1rem * var(--text-scale-ratio));
-  --modal-body-font: var(--poppins);
+  --modal-body-font: var(--font-primary);
 
   // UNIQUE ELEMENTS
   --footer-slogan: calc(1.8rem * var(--text-scale-ratio));
@@ -152,7 +149,8 @@ $box-shadow-modal: rgba(89, 93, 97, 0.05) 0 3px 0,
   --selection-color: var(--selection2);
   // LINKS
   --link: var(--grey-dark);
-  --link-hover: var(--pink);
+  --link-hover: var(--success);
+  --link-active: var(--success-dark);
   //FOOTER
   --footer-bg: var(--white-alt);
   // CARD
@@ -172,7 +170,7 @@ $box-shadow-modal: rgba(89, 93, 97, 0.05) 0 3px 0,
   // SPACER ELEMENTS
   --spacer-color: var(--white-alt);
   // NAV SHADOW
-  --nav-shadow: rgba(172, 172, 172, 0.05) 0 3px 0;
+  --nav-shadow: rgba(199, 199, 199, 0.5) 0 5px 12px;
   // NAV LINKS
   --nav-link: var(--grey);
   --nav-link-hover: var(--black);
@@ -208,7 +206,8 @@ $box-shadow-modal: rgba(89, 93, 97, 0.05) 0 3px 0,
   --selection-color: var(--selection);
   // LINKS
   --link: var(--white-alt);
-  --link-hover: var(--pink);
+  --link-hover: var(--success);
+  --link-active: var(--success-dark);
   // CARD
   --card-bg: var(--bg-alt);
   --card-shadow: 0 6px 6px 0px rgba(9, 29, 92, 0.3);

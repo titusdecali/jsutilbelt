@@ -23,11 +23,11 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'DEFAULT TITLE'
+      default: 'Default Title'
     },
     subTitle: {
       type: String,
-      default: 'DEFAULT SUBTITLE'
+      default: 'Default Subtitle'
     },
     code: {
       type: String,
@@ -64,14 +64,16 @@ export default {
   .title {
     margin-top: 15px;
     margin-left: 5px;
+    margin-bottom: -20px;
     width: fit-content;
     cursor: pointer;
     padding-right: 50px;
+    font-weight: 700;
   }
 
   .sub-title {
-    margin-top: 10px;
     margin-left: 5px;
+    font-weight: light;
   }
 
   .add-icon {

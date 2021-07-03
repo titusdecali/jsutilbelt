@@ -46,12 +46,12 @@ export default {
   cursor: pointer;
   &:hover {
     .inner {
-      fill: var(--blue);
+      fill: var(--link-hover);
     }
 
     &:active {
       .inner {
-        fill: var(--blue-dark);
+        fill: var(--link-active);
       }
     }
   }

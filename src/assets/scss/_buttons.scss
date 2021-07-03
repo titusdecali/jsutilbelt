@@ -1,8 +1,9 @@
 // Base classes
 .btn {
-  background: var(--blue);
+  user-select: none;
+  background: var(--black);
   outline: none;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--black);
   border-radius: var(--btn-border-radius);
   color: var(--white);
   display: inline-block;
@@ -14,23 +15,25 @@
   box-sizing: border-box;
 
   &:hover {
-    background: var(--blue-dark);
-    border-color: var(--blue-dark);
+    background: var(--white);
+    border-color: var(--pink);
+    color: var(--pink);
     cursor: pointer;
   }
 
   &:focus {
-    background: var(--blue-dark);
-    border-color: var(--blue-dark);
+    background: var(--white);
+    border-color: var(--pink);
+    color: var(--pink);
     cursor: pointer;
   }
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--blue)-border;
+  border: 2px solid var(--black);
   border-radius: var(--btn-border-radius);
-  color: var(--blue);
+  color: var(--black);
   display: inline-block;
   font-weight: 600;
   text-align: center;
@@ -42,7 +45,7 @@
 
   &:hover,
   &:focus {
-    background: var(--blue)-border;
+    background: var(--blue);
     border-color: transparent;
     cursor: pointer;
   }
@@ -187,7 +190,7 @@
   &:focus {
     background: var(--blue);
     cursor: pointer;
-    border: 2px solid var(--blue)-border;
+    border: 2px solid var(--blue);
   }
 
   &:active {
@@ -200,7 +203,7 @@
   font-size: 15px !important;
   margin: 5px 5px;
   background: white;
-  border: 2px solid var(--blue)-border;
+  border: 2px solid var(--blue);
   border-radius: var(--btn-border-radius);
   box-sizing: border-box;
   color: var(--blue);

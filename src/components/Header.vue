@@ -1,24 +1,35 @@
 <template>
   <nav class="header" role="navigation" aria-label="main navigation">
-    <div class="logo-align">
-      <router-link to="/" class="float-left" aria-label="Go Home">
-        <img src="" alt="JS Util Generator logo" />
-      </router-link>
-      <router-link to="/submit">
-        <Button
-          v-show="$route.path !== '/submit'"
-          class="submit btn btn-medium float-right"
-        >
-          Submit Resource
-        </Button>
-      </router-link>
-    </div>
+    <!-- Logo -->
+    <router-link to="/" class="logo" aria-label="Go Home">
+      <span class="js">JS</span>UtilityBelt
+    </router-link>
+
+    <!-- Util Belt Icon -->
+
+    <IconBelt />
+
+    <!-- Submit -->
+    <router-link to="/submit" class="submit">
+      <Button
+        v-show="$route.path !== '/submit'"
+        class="btn btn-medium float-right"
+      >
+        Submit Resource
+      </Button>
+    </router-link>
   </nav>
 </template>
 
 <script>
+import IconBelt from '@/components/icons/Belt'
+
 export default {
-  name: 'Header'
+  name: 'Header',
+
+  components: {
+    IconBelt
+  }
 }
 </script>
 
@@ -27,9 +38,33 @@ export default {
   padding: 8px 20px 10px;
   background: var(--bg);
   box-shadow: var(--nav-shadow);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  top: 9px;
+  font-size: 22px;
+  font-weight: 300;
+  .js {
+    font-weight: 900;
+  }
+}
+
+.belt {
+  pointer-events: none;
+  user-select: none;
+  width: 110px;
 }
 
 .logo-align {
   text-align: left;
+}
+
+.submit {
+  @media (max-width: 500px) {
+    display: none;
+  }
 }
 </style>

@@ -43,7 +43,7 @@ a {
   font-weight: 500;
   transition: var(--ease);
   &:hover {
-    color: var(--warning);
+    color: var(--link-hover);
   }
 }
 
