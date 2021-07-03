@@ -1,0 +1,281 @@
+/*
+* === THEME SWITCH ===
+*/
+
+input.theme-switch {
+  display: none;
+}
+input.theme-switch + label {
+  cursor: pointer;
+}
+input.theme-switch:not(:checked) + label:hover {
+  cursor: pointer;
+}
+input.theme-switch + label:active,
+input.theme-switch:checked + label {
+  cursor: pointer;
+}
+
+/*
+* === BORDER-RADIUS / BOX-SHADOW / TRANSITIONS ===
+*/
+
+// Box Shadow
+$box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.15);
+$box-shadow-modal: rgba(89, 93, 97, 0.05) 0 3px 0,
+  rgba(94, 99, 104, 0.12) 0 4px 8px, rgba(90, 97, 105, 0.06) 0 10px 10px,
+  rgba(90, 97, 105, 0.1) 0 7px 70px;
+
+/*
+* === THEME COLORS ===
+*/
+
+// Swiper.js theme
+.swiper-pagination-bullet {
+  background: var(--swiper-pagination-dot) !important;
+}
+
+// GLOBAL VARS
+:root {
+  //***** Fonts ***** //
+
+  // TRANSITIONS
+  --bounce: all 0.3s cubic-bezier(0.374, 0.019, 0.035, 1.861);
+  --ease: all 0.16s ease-in-out;
+
+  --poppins: 'Poppins', sans-serif;
+  --dm-sans: 'DM Sans', sans-serif;
+
+  --font-primary: var(--poppins);
+  --font-alt: var(--dm-sans);
+
+  // FONT SIZE BREAK POINTS
+  --text-scale-ratio: 1;
+  @media (max-width: 800px) {
+    --text-scale-ratio: 1;
+  }
+  @media (max-width: 600px) {
+    --text-scale-ratio: 0.9;
+  }
+
+  // FONT SIZES
+  --xxl: calc(3.2rem * var(--text-scale-ratio)); // 64px
+  --xl: calc(2.5rem * var(--text-scale-ratio)); // 40px
+  --lg: calc(1.5rem * var(--text-scale-ratio)); // 24px
+  --md: calc(1.125rem * var(--text-scale-ratio)); // 18px
+  --sm: calc(1rem * var(--text-scale-ratio)); // 16px
+  --xs: calc(0.875rem * var(--text-scale-ratio)); // 14px
+  --xxs: calc(0.75rem * var(--text-scale-ratio)); // 12px
+
+  // BUTTON SIZES
+  --btn-lg: calc(3rem * var(--text-scale-ratio)); // 48px
+  --btn-md: calc(2.5rem * var(--text-scale-ratio)); // 40px
+  --btn-sm: calc(2rem * var(--text-scale-ratio)); // 24px
+
+  //***** Colors ***** //
+  --black: #071724;
+  --black-alt: rgb(9, 26, 40); // #091a28;
+  --white: rgb(252, 252, 253); // #fcfcfd
+  --white-alt: #f4f5f6;
+  --near-white: #eeeff4;
+  --grey-ultralight: #e4e5e8;
+  --grey-light: #b6b7ba;
+  --grey: #777e90;
+  --grey-dark: #353945;
+  --grey-dark-alt: #1d232f;
+
+  // Link Hover
+  --blue-dark: #0f3da9;
+  --blue: #306dff;
+  --pink: #f2018a;
+
+  // Text Highlight
+  --selection: #f2018aa1;
+  --selection2: #ffe1009e;
+
+  // Nav Links
+  --nav-link-active-weight: 500;
+
+  // Status
+  --primary: var(--blue);
+  --success: #45bf6f;
+  --success-dark: #058e35;
+  --warning: #e3dc28;
+  --danger: #ef466f;
+  --error: #ef466f;
+
+  //***** Components ***** //
+  // BUTTONS
+  --btn-border-radius: 8px;
+
+  // MODAL
+  --modal-border-radius: 24px;
+  --modal-bg: var(--white-alt);
+  --modal-backdrop: var(--bg);
+  --modal-title: calc(2rem * var(--text-scale-ratio));
+  --modal-body: calc(1rem * var(--text-scale-ratio));
+  --modal-body-font: var(--poppins);
+
+  // UNIQUE ELEMENTS
+  --footer-slogan: calc(1.8rem * var(--text-scale-ratio));
+}
+
+// DEFAULT THEME (LIGHT)
+:root {
+  // Swiper.js Styles
+  --swiper-pagination-dot: var(--pink);
+
+  // BOX SHADOW
+  --box-shadow-card: -1px 15px 15px rgba(0, 0, 0, 0.14);
+  // BORDER
+  --border-card: 1px solid var(--grey-light);
+  // ICONS
+  --close-x: var(--danger);
+  --close-circle: var(--text-alt);
+  // BG
+  --bg: var(--white);
+  --bg-alt: var(--white-alt);
+  --bg-invert: var(--black);
+  --bg-alt-invert: var(--black-alt);
+  // BTN
+  --btn-base-text: var(--grey-dark-alt);
+  --btn-base-modal-text: var(--grey-dark-alt);
+  // INPUT (Select Box)
+  --select-bg: var(--white-alt);
+  --select-border: var(--grey-ultralight);
+  // TEXT
+  --text: var(--black);
+  --text-invert: var(--white);
+  --text-title: var(--grey-dark);
+  --text-subtitle: var(--grey);
+  --text-alt: var(--grey-dark-alt);
+  --selection-color: var(--selection2);
+  // LINKS
+  --link: var(--grey-dark);
+  --link-hover: var(--pink);
+  //FOOTER
+  --footer-bg: var(--white-alt);
+  // CARD
+  --card-bg: var(--bg);
+  --card-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 8px 8px 1px rgba(0, 0, 0, 0.1);
+  --card-border: var(--grey-ultralight);
+  --card-border-radius: 16px;
+  // MODAL
+  --modal-break: var(--grey-ultralight);
+  --modal-bg: var(--white);
+  --modal-backdrop: var(--bg);
+  --modal-title: calc(2rem * var(--text-scale-ratio));
+  --modal-shadow: rgba(89, 93, 97, 0.05) 0 3px 0,
+    rgba(94, 99, 104, 0.12) 0 4px 8px, rgba(90, 97, 105, 0.06) 0 10px 10px,
+    rgba(90, 97, 105, 0.1) 0 7px 70px;
+  // SPACER ELEMENTS
+  --spacer-color: var(--white-alt);
+  // NAV SHADOW
+  --nav-shadow: rgba(172, 172, 172, 0.05) 0 3px 0;
+  // NAV LINKS
+  --nav-link: var(--grey);
+  --nav-link-hover: var(--black);
+}
+
+// DARK THEME
+[theme='dark'] {
+  // Swiper.js Styles
+  --swiper-pagination-dot: var(--pink);
+
+  // BOX SHADOW
+  --box-shadow-card: -1px 15px 15px rgba(144, 207, 255, 0.14);
+  // ICONS
+  --close-x: var(--danger);
+  --close-circle: var(--text-alt);
+  // BG
+  --bg: var(--black);
+  --bg-alt: var(--grey-dark-alt);
+  --bg-invert: var(--white);
+  --bg-alt-invert: var(--white);
+  // BTN
+  --btn-base-text: var(--grey);
+  --btn-base-modal-text: var(--grey-dark-alt);
+  // INPUT (Select Box)
+  --select-bg: var(--grey-dark);
+  --select-border: var(--grey-dark);
+  // TEXT
+  --text: var(--white);
+  --text-invert: var(--black);
+  --text-title: var(--white);
+  --text-subtitle: var(--grey);
+  --text-alt: var(--grey-light);
+  --selection-color: var(--selection);
+  // LINKS
+  --link: var(--white-alt);
+  --link-hover: var(--pink);
+  // CARD
+  --card-bg: var(--bg-alt);
+  --card-shadow: 0 6px 6px 0px rgba(9, 29, 92, 0.3);
+  --card-shadow-hover: 0 12px 25px 4px rgba(8, 37, 97, 0.45);
+  --card-border: var(--grey-dark);
+  //FOOTER
+  --footer-bg: var(--black-alt);
+  // MODAL
+  --modal-break: var(--grey-dark);
+  --modal-shadow: rgba(182, 189, 196, 0.05) 0 3px 0,
+    rgba(94, 99, 104, 0.12) 0 4px 8px, rgba(173, 177, 181, 0.06) 0 10px 25px,
+    rgba(234, 238, 242, 0.1) 0 7px 40px;
+  // SPACER ELEMENTS
+  --spacer-color: var(--grey-dark);
+  // NAV SHADOW
+  --nav-shadow: rgba(70, 61, 128, 0.25) 0 2px 25px 2px;
+  // NAV LINKS
+  --nav-link: var(--white);
+  --nav-link-hover: var(--grey);
+}
+
+// ************************** //
+// ***** GLOBAL CLASSES ***** //
+// ************************** //
+
+// Global font classes
+.text-xxl {
+  font-size: var(--text-xxl); // 64px
+}
+.text-xl {
+  font-size: var(--text-xl); // 40px
+}
+.text-lg {
+  font-size: var(--text-lg); // 24px
+}
+.text-md {
+  font-size: var(--text-md); // 18px
+}
+.text-sm {
+  font-size: var(--text-sm); // 16px
+}
+.text-xs {
+  font-size: var(--text-xs); // 14px
+}
+.text-xxs {
+  font-size: var(--text-xxs); // 12px
+}
+
+// Text Styles
+.grey {
+  color: var(--grey);
+}
+
+.text {
+  color: var(--text);
+}
+
+.disabled {
+  cursor: default !important;
+  color: var(--grey-light) !important;
+}
+
+// Greyscale images
+.greyscale {
+  transition: all 0.25s ease;
+  filter: saturate(45%);
+  &:hover {
+    filter: saturate(100%);
+  }
+}

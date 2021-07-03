@@ -1,0 +1,382 @@
+// Base classes
+.btn {
+  background: var(--blue);
+  outline: none;
+  border: 2px solid var(--blue);
+  border-radius: var(--btn-border-radius);
+  color: var(--white);
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--ease);
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  &:hover {
+    background: var(--blue-dark);
+    border-color: var(--blue-dark);
+    cursor: pointer;
+  }
+
+  &:focus {
+    background: var(--blue-dark);
+    border-color: var(--blue-dark);
+    cursor: pointer;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--blue)-border;
+  border-radius: var(--btn-border-radius);
+  color: var(--blue);
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--ease);
+  user-select: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background: var(--blue)-border;
+    border-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.btn-success {
+  outline: none;
+  background: var(--white);
+  border: 2px solid var(--success);
+  border-radius: var(--btn-border-radius);
+  color: var(--success);
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--ease);
+  user-select: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background: var(--success);
+    color: var(--white);
+    border-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.btn-alt-success {
+  outline: none;
+  background: var(--success);
+  border: 2px solid var(--success);
+  border-radius: var(--btn-border-radius);
+  color: var(--white);
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--ease);
+  user-select: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background: var(--success);
+    color: var(--white);
+    border-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.btn-alt-danger {
+  outline: none;
+  background: var(--danger);
+  border: 2px solid var(--danger);
+  border-radius: var(--btn-border-radius);
+  color: var(--white);
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--ease);
+  user-select: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background: var(--danger);
+    color: var(--danger);
+    border-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.btn-danger {
+  outline: none;
+  background: var(--danger);
+  border: 2px solid var(--danger);
+  border-radius: var(--btn-border-radius);
+  color: var(--danger);
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--ease);
+  user-select: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background: var(--danger);
+    color: var(--danger);
+    border-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.btn-warning {
+  outline: none;
+  background: var(--warning);
+  border: 2px solid var(--danger);
+  border-radius: var(--btn-border-radius);
+  color: var(--danger);
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--ease);
+  user-select: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background: var(--danger);
+    color: var(--danger);
+    border-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.btn-alt {
+  background: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: var(--btn-border-radius);
+  color: var(--blue);
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--ease);
+  user-select: none;
+  vertical-align: middle;
+  box-sizing: border-box;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background: var(--blue);
+    cursor: pointer;
+    border: 2px solid var(--blue)-border;
+  }
+
+  &:active {
+    border: 2px solid var(--blue);
+  }
+}
+
+.btn-nav {
+  outline: none;
+  font-size: 15px !important;
+  margin: 5px 5px;
+  background: white;
+  border: 2px solid var(--blue)-border;
+  border-radius: var(--btn-border-radius);
+  box-sizing: border-box;
+  color: var(--blue);
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: var(--ease);
+  user-select: none;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    background: var(--blue);
+    border-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  &:active {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+  }
+}
+
+.btn-nav-active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
+
+// Sizes
+.btn-small {
+  font-size: 16px;
+  padding: 6px 16px;
+}
+
+.btn-medium {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.btn-large {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.btn-mega {
+  font-size: 24px;
+  padding: 16px 28px;
+}
+
+.btn-disabled {
+  box-sizing: border-box;
+  background: var(--grey-light);
+  border: 2px solid var(--grey-light);
+  color: var(--white);
+
+  &:hover {
+    background: var(--grey-light);
+    border: 2px solid var(--grey-light);
+    color: var(--white);
+    cursor: default;
+  }
+}
+
+// Nav Settings
+.nav-link {
+  margin: 15px;
+  color: var(--text-alt);
+  text-decoration: none !important;
+}
+
+.nav-link-active {
+  margin-bottom: 0px;
+  color: var(--text);
+  text-decoration: none !important;
+  border-bottom: 2px solid var(--text);
+
+  &:focus {
+    border-bottom: 2px solid var(--text);
+    color: var(--text);
+  }
+}
+
+.back-btn {
+  font-weight: bold;
+  color: var(--text-alt);
+  transition: var(--ease);
+  position: absolute;
+  top: 40px;
+  left: 25px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: var(--text);
+  }
+}
+
+// UI Buttons
+.btn-close {
+  background-color: transparent;
+  transition: var(--ease);
+  outline: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  line-height: 5px;
+  color: var(--text);
+  border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    color: var(--danger);
+  }
+}
+
+// Project Buttons
+.glow {
+  line-height: 60px;
+  font-size: 25px;
+  font-weight: bold;
+  height: 60px;
+  width: 300px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background: var(--blue);
+  background-size: 400%;
+  cursor: pointer;
+}
+
+.glow:hover {
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+.glow:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.glow:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
