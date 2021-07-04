@@ -1,10 +1,10 @@
 <template>
   <div class="card">
     <IconAddUtil class="add-icon" @click="addToMyList" />
-    <h3 class="title">{{ title }}</h3>
-    <h4 class="sub-title">{{ subTitle }}</h4>
+    <h3 class="title">{{ card.title }}</h3>
+    <h4 class="sub-title">{{ card.subtitle }}</h4>
 
-    <CodeBox :code="code" class="code" />
+    <CodeBox :code="card.code" class="code" />
   </div>
 </template>
 
@@ -21,23 +21,15 @@ export default {
   },
 
   props: {
-    title: {
-      type: String,
-      default: 'Default Title'
-    },
-    subTitle: {
-      type: String,
-      default: 'Default Subtitle'
-    },
-    code: {
-      type: String,
+    card: {
+      type: Object,
       required: true
     }
   },
 
   methods: {
     addToMyList() {
-      alert('Add to my list!')
+      alert('Add to my list!' + this.card.id)
     }
   }
 }
@@ -64,7 +56,7 @@ export default {
   .title {
     margin-top: 15px;
     margin-left: 5px;
-    margin-bottom: -20px;
+    margin-bottom: -16px;
     width: fit-content;
     cursor: pointer;
     padding-right: 50px;

@@ -7,7 +7,7 @@
 
     <!-- Util Belt Icon -->
 
-    <IconBelt />
+    <IconBelt class="belt" />
 
     <!-- Submit -->
     <router-link to="/submit" class="submit">
@@ -55,7 +55,8 @@ export default {
 .belt {
   pointer-events: none;
   user-select: none;
-  width: 110px;
+  height: 40px;
+  width: 150px;
 }
 
 .logo-align {
