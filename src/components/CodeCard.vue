@@ -38,7 +38,6 @@ export default {
 <style lang="scss" scoped>
 .card {
   margin-bottom: 50px;
-  user-select: none;
   position: relative;
   min-height: 225px;
   height: fit-content;
@@ -54,6 +53,7 @@ export default {
   border-radius: 8px;
 
   .title {
+    user-select: none;
     margin-top: 15px;
     margin-left: 5px;
     margin-bottom: -16px;
@@ -64,6 +64,7 @@ export default {
   }
 
   .sub-title {
+    user-select: none;
     margin-left: 5px;
     font-weight: light;
   }
@@ -76,6 +77,7 @@ export default {
   }
 
   .code {
+    overflow-x: scroll;
     cursor: text;
     position: absolute;
     bottom: -11px;
