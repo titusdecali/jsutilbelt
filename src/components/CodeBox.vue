@@ -1,8 +1,8 @@
 <template>
   <div class="code-box">
-    <code-highlight language="javascript">
+    <CodeHighlight language="javascript">
       {{ code }}
-    </code-highlight>
+    </CodeHighlight>
   </div>
 </template>
 

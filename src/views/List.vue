@@ -3,7 +3,7 @@
     :cols="{ default: 3, 1600: 2, 1100: 1 }"
     :gutter="{ default: '40px' }"
   >
-    <CodeCard v-for="card in util_functions" :key="card.id" :card="card" />
+    <CodeCard v-for="card in utilities" :key="card.id" :card="card" />
   </masonry>
 </template>
 
@@ -13,7 +13,7 @@ import gql from 'graphql-tag'
 
 const GET_UTILS = gql`
   query getUtils {
-    util_functions {
+    utilities {
       id
       code
       category
@@ -34,12 +34,12 @@ export default {
 
   data() {
     return {
-      util_functions: []
+      utilities: []
     }
   },
 
   apollo: {
-    util_functions: {
+    utilities: {
       query: GET_UTILS
     }
   }

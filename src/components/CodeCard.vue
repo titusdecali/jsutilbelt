@@ -4,13 +4,14 @@
     <h3 class="title">{{ card.title }}</h3>
     <h4 class="sub-title">{{ card.subtitle }}</h4>
 
-    <CodeBox :code="card.code" class="code" />
+    <CodeBox :code="prettyJs(card.code)" class="code" />
   </div>
 </template>
 
 <script>
 import CodeBox from '@/components/CodeBox'
 import IconAddUtil from '@/components/icons/AddUtil'
+import prettyJs from 'pretty-js'
 
 export default {
   name: 'CodeCard',
@@ -27,6 +28,17 @@ export default {
     }
   },
 
+  data() {
+    return {
+      prettyJs,
+      // PrettyJs Options
+      options: {
+        indent: '\t', // Switch to tabs for indentation
+        newline: '\r\n' // Windows-style newlines
+      }
+    }
+  },
+
   methods: {
     addToMyList() {
       alert('Add to my list!' + this.card.id)
@@ -39,14 +51,11 @@ export default {
 .card {
   margin-bottom: 50px;
   position: relative;
-  min-height: 225px;
-  height: fit-content;
   width: 100%;
   box-sizing: border-box;
   transition: var(--bounce);
   padding: 0px 10px;
   box-shadow: var(--card-shadow);
-  overflow: hidden;
   &:hover {
     box-shadow: var(--card-shadow-hover);
   }
@@ -80,9 +89,8 @@ export default {
     overflow-x: scroll;
     cursor: text;
     position: absolute;
-    bottom: -11px;
     left: 0;
-    right: -10px;
+    right: -5px;
   }
 }
 </style>
