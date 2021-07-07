@@ -1,4 +1,8 @@
-# JS UTIL GENERATOR
+# JS Utility Toolbelt (www.UtilBelt.com)
+
+```
+JS Util Generator is a simple webapp located at utilbelt.com that generates a `utils.js` file based on user-selected utility functions.
+```
 
 ## Project setup
 

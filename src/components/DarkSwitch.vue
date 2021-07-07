@@ -29,17 +29,11 @@
 </template>
 
 <script>
-// import { mapGetters } from 'vuex'
-
 export default {
   data() {
     return {
       darkMode: true
     }
-  },
-
-  computed: {
-    // ...mapGetters(['getDarkMode'])
   },
 
   watch: {
@@ -50,13 +44,9 @@ export default {
       if (this.darkMode) {
         localStorage.setItem('theme', 'dark')
         htmlElement.setAttribute('theme', 'dark')
-        // Set darkMode to true in Vuex $store
-        this.$store.commit('setDarkMode', true)
       } else {
         localStorage.setItem('theme', 'light')
         htmlElement.setAttribute('theme', 'light')
-        // Set darkMode to false in Vuex $store
-        this.$store.commit('setDarkMode', false)
       }
     }
   },

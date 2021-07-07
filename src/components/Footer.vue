@@ -2,7 +2,7 @@
   <footer>
     <div class="footer-bottom">
       <div class="bottom-left">
-        Made by
+        Crafted by
         <a href="https://titusdecali.com" target="_blank">Titus Decali</a>
       </div>
       <DarkSwitch class="dark-switch" />
@@ -12,7 +12,6 @@
 
 <script>
 import DarkSwitch from '@/components/DarkSwitch'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'FOOTER',
@@ -23,7 +22,6 @@ export default {
   data() {
     return { showCookieBar: true }
   },
-  computed: { ...mapGetters(['getDarkMode']) },
   methods: {
     acceptCookies() {
       this.showCookieBar = false

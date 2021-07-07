@@ -1,9 +1,7 @@
 <template>
-  <div class="code-box">
-    <CodeHighlight language="javascript">
-      {{ code }}
-    </CodeHighlight>
-  </div>
+  <CodeHighlight language="javascript" class="code-box">
+    {{ code }}
+  </CodeHighlight>
 </template>
 
 <script>
@@ -27,9 +25,8 @@ export default {
 </script>
 
 <style lang="scss">
-.code-box {
-  min-height: fit-content !important;
-  position: relative;
+.code {
+  margin-left: 2px;
 }
 
 // Styles to override vue-code-highlight

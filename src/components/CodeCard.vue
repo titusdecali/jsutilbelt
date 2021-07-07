@@ -4,7 +4,8 @@
     <h3 class="title">{{ card.title }}</h3>
     <h4 class="sub-title">{{ card.subtitle }}</h4>
 
-    <CodeBox :code="prettyJs(card.code)" class="code" />
+    <CodeBox :code="prettyJs(card.code, options)" class="code" />
+    <!-- <button @click="save">TEST</button> -->
   </div>
 </template>
 
@@ -34,13 +35,16 @@ export default {
       // PrettyJs Options
       options: {
         indent: '\t', // Switch to tabs for indentation
-        newline: '\r\n' // Windows-style newlines
+        newline: '\r\n', // Windows-style newlines
+        noSpaceAfterFunction: true,
+        convertStrings: 'double'
       }
     }
   },
 
   methods: {
     addToMyList() {
+      // Save snippets to localStorage, recall @app load
       alert('Add to my list!' + this.card.id)
     }
   }
@@ -68,6 +72,7 @@ export default {
     margin-bottom: -16px;
     width: fit-content;
     cursor: pointer;
+    padding-top: 10px;
     padding-right: 50px;
     font-weight: 700;
   }
@@ -80,17 +85,20 @@ export default {
 
   .add-icon {
     position: absolute;
-    width: 40px;
+    width: 35px;
     right: 15px;
-    top: 10px;
+    top: 2px;
   }
 
   .code {
-    overflow-x: scroll;
+    overflow-x: auto;
     cursor: text;
-    position: absolute;
+    position: relative;
+    bottom: 0;
     left: 0;
-    right: -5px;
+    right: 0;
+    margin-top: 10px;
+    width: 100%;
   }
 }
 </style>
