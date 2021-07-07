@@ -84,9 +84,12 @@ export default {
             // How to use global utility functions: TODO: Add link here
 
            ${this.selected.map(
-             //
-             (util) => `// ${util.title}
-             // *************************************************************
+             // eslint-disable-next-line prettier/prettier
+             (util) => `
+
+             
+             // **********************************************************
+           // ${util.title}
            ${util.code}`
            )}
           }
