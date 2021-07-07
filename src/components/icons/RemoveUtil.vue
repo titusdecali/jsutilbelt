@@ -19,7 +19,7 @@
             <g id="Group" transform="translate(0.000000, -0.000000)">
               <rect
                 id="Rectangle-Copy-4"
-                fill="#000000"
+                fill="var(--bg-invert)"
                 x="0.0540540541"
                 y="193.445946"
                 width="250"
@@ -28,7 +28,7 @@
               ></rect>
               <rect
                 id="Rectangle-Copy-5"
-                fill="#000000"
+                fill="var(--bg-invert)"
                 x="0.0540540541"
                 y="141.445946"
                 width="250"
@@ -37,7 +37,7 @@
               ></rect>
               <rect
                 id="Rectangle-Copy-6"
-                fill="#000000"
+                fill="var(--bg-invert)"
                 x="0.0540540541"
                 y="89.4459459"
                 width="250"
