@@ -78,27 +78,27 @@ export default {
     // Save functions into utils.js file
     downloadUtils() {
       // !FileSaver DOCS: https://github.com/eligrey/FileSaver.js/
-      let utilText = new Blob(
-        [
-          `
+      const utilText = `
           class Utils {
             // Global Utilities
             // How to use global utility functions: TODO: Add link here
-            // ***************************************************************
-           // ${this.selected.map(
+
+           ${this.selected.map(
+             //
              (util) => `// ${util.title}
+             // *************************************************************
            ${util.code}`
            )}
           }
-
           export default new Utils()
       `
-        ],
+      const utilBlob = new Blob(
+        [utilText.replace(/},/g, '}').replace(/ +(?= )/g, '')],
         {
           type: 'text/plain;charset=utf-8'
         }
       )
-      saveAs(utilText, 'utils.js')
+      saveAs(utilBlob, 'utils.js')
     }
   },
 
