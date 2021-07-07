@@ -6,17 +6,18 @@
     </router-link>
 
     <!-- Util Belt Icon -->
-
-    <IconBelt class="belt" />
+    <router-link to="/" class="belt" aria-label="Go Home">
+      <IconBelt />
+    </router-link>
 
     <!-- Submit -->
-    <router-link to="/submit" class="submit">
-      <Button
+    <router-link :to="{ name: 'Submit' }" class="submit">
+      <button
         v-show="$route.path !== '/submit'"
-        class="btn btn-medium float-right"
+        class="btn btn-medium btn-outline float-right"
       >
-        Submit Resource
-      </Button>
+        Submit A Utility
+      </button>
     </router-link>
   </nav>
 </template>

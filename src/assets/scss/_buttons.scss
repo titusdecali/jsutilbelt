@@ -1,11 +1,11 @@
 // Base classes
 .btn {
   user-select: none;
-  background: var(--black);
+  background: var(--bg-invert);
   outline: none;
-  border: 2px solid var(--black);
+  border: 2px solid var(--bg);
   border-radius: var(--btn-border-radius);
-  color: var(--white);
+  color: var(--bg);
   display: inline-block;
   font-weight: 600;
   text-align: center;
@@ -31,9 +31,9 @@
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--black);
+  border: 2px solid var(--bg);
   border-radius: var(--btn-border-radius);
-  color: var(--black);
+  color: var(--bg-invert);
   display: inline-block;
   font-weight: 600;
   text-align: center;
@@ -45,9 +45,10 @@
 
   &:hover,
   &:focus {
-    background: var(--blue);
-    border-color: transparent;
+    background: var(--);
+    border-color: var(--pink);
     cursor: pointer;
+    color: var(--bg-invert);
   }
 }
 

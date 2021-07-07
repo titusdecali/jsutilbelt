@@ -25,8 +25,10 @@ export default {
 </script>
 
 <style lang="scss">
-.code {
-  margin-left: 2px;
+.code-box {
+  pre {
+    margin-bottom: -4px;
+  }
 }
 
 // Styles to override vue-code-highlight

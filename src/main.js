@@ -5,6 +5,26 @@ import router from './router'
 // Masonry Card Layout
 import VueMasonry from 'vue-masonry-css'
 
+// Vue Toastification
+import Toast from 'vue-toastification'
+import 'vue-toastification/dist/index.css'
+// * Toast Options: https://maronato.github.io/vue-toastification/
+Vue.use(Toast, {
+  transition: 'Vue-Toastification__fade',
+  position: 'bottom-left',
+  timeout: 2000,
+  closeOnClick: true,
+  pauseOnFocusLoss: true,
+  pauseOnHover: true,
+  maxToasts: 2,
+  draggable: true,
+  draggablePercent: 0.4,
+  showCloseButtonOnHover: false,
+  hideProgressBar: true,
+  closeButton: 'button',
+  icon: true
+})
+
 // Apollo, GraphQL
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'

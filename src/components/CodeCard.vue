@@ -1,17 +1,26 @@
 <template>
   <div class="card">
-    <IconAddUtil class="add-icon" @click="addToMyList" />
+    <div @click="emitAdded">
+      <transition-group name="fade" mode="out-in">
+        <IconAddUtil v-show="!added" :key="1" class="add-icon" />
+        <IconRemoveUtil v-show="added" :key="2" class="remove-icon" />
+      </transition-group>
+    </div>
     <h3 class="title">{{ card.title }}</h3>
     <h4 class="sub-title">{{ card.subtitle }}</h4>
 
     <CodeBox :code="prettyJs(card.code, options)" class="code" />
-    <!-- <button @click="save">TEST</button> -->
+    <div class="io">
+      <span><b>Inputs:</b> {{ card.input }}</span>
+      <span><b>Outputs:</b> {{ card.output }} </span>
+    </div>
   </div>
 </template>
 
 <script>
 import CodeBox from '@/components/CodeBox'
 import IconAddUtil from '@/components/icons/AddUtil'
+import IconRemoveUtil from '@/components/icons/RemoveUtil'
 import prettyJs from 'pretty-js'
 
 export default {
@@ -19,13 +28,18 @@ export default {
 
   components: {
     CodeBox,
-    IconAddUtil
+    IconAddUtil,
+    IconRemoveUtil
   },
 
   props: {
     card: {
       type: Object,
       required: true
+    },
+    added: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -43,15 +57,17 @@ export default {
   },
 
   methods: {
-    addToMyList() {
-      // Save snippets to localStorage, recall @app load
-      alert('Add to my list!' + this.card.id)
+    emitAdded() {
+      this.$emit('added', this.card)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+pre {
+  margin-bottom: 0px !important;
+}
 .card {
   margin-bottom: 50px;
   position: relative;
@@ -90,7 +106,15 @@ export default {
     top: 2px;
   }
 
+  .remove-icon {
+    position: absolute;
+    width: 35px;
+    right: 15px;
+    top: 15px;
+  }
+
   .code {
+    margin-bottom: 5px;
     overflow-x: auto;
     cursor: text;
     position: relative;
@@ -99,6 +123,12 @@ export default {
     right: 0;
     margin-top: 10px;
     width: 100%;
+  }
+
+  .io {
+    padding: 0px 5px 10px 5px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 </style>
