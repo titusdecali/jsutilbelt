@@ -4,7 +4,7 @@
 JS Util Generator is a simple webapp located at utilbelt.com 
 that generates a utils.js file based on user-selected utility functions.
 
-This repo is open source and free to copy or learn from.
+This repo is open source via an MIT License and free to copy or learn from.
 ```
 
 ## Project setup
