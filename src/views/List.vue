@@ -64,6 +64,13 @@ export default {
     }
   },
 
+  mounted() {
+    // const utils = localStorage.getItem('userUtils')
+    // if (utils && utils.length) {
+    //   this.selected = utils
+    // }
+  },
+
   methods: {
     addToList(card) {
       if (this.selected.some((obj) => obj.id === card.id)) {
@@ -71,6 +78,10 @@ export default {
         this.$toast.warning('Removed from list')
       } else {
         this.selected.push(card)
+        // Reset localStorage
+        localStorage.removeItem('userUtils')
+        // Then bind user selections
+        localStorage.setItem('userUtils', this.selected)
         this.$toast.success('Added to list')
       }
     },
