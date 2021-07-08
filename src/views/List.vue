@@ -82,7 +82,6 @@ export default {
           class Utils {
             // Global Utilities
             // How to use global utility functions: TODO: Add link here
-
            ${this.selected.map(
              // eslint-disable-next-line prettier/prettier
              (util) => `
@@ -96,7 +95,12 @@ export default {
           export default new Utils()
       `
       const utilBlob = new Blob(
-        [utilText.replace(/},/g, '}').replace(/ +(?= )/g, '')],
+        [
+          utilText
+            .replace(/},/g, '}')
+            .replace(/} ,/g, '}')
+            .replace(/ +(?= )/g, '')
+        ],
         {
           type: 'text/plain;charset=utf-8'
         }

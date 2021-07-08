@@ -19,10 +19,12 @@
     "graphql-tag": "^2.12.5",
     "prettier": "^2.2.1",
     "pretty-js": "^0.2.2",
+    "prismjs": "^1.15.0",
     "vssue": "^1.4.8",
     "vue": "^2.6.11",
     "vue-apollo": "^3.0.7",
     "vue-code-highlight": "^0.7.8",
+    "vue-prism-editor": "^1.2.2",
     "vue-router": "^3.2.0",
     "vue-toastification": "^1.7.11"
   },
